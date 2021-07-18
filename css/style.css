@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    
+} 
+
+    
+
+.img1{
+    background: url(../images/1519799101937.jpg) ;
+    background-size: 1528px 403px;
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    
+}
+.quotes{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    transform: translateY(50px);
+    width: 100%;
+    height: 400px;
+    background:rgba(14, 13, 13, 0.5) ;
+    box-shadow: 0px 5px 10px rgba(0,0,0.5);
+   
+    
+}
+.img1 .quotes h1{
+    color:royalblue;
+    font-size:4rem ;
+    font-style: initial;
+    background: white;
+    transform: translateY(15px);
+
+}
+.template{
+    background: white;
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    transform: translateY(-5px);
+    display: flex;
+}
+.content1{
+    height: 500px;
+    width: 150%;
+    background: white;
+    padding-top: 50px;
+    padding-left: 50px;
+
+}
+.template .content1 .message{
+    color:black;
+
+}
+.template .content2 .follow {
+    
+    position: fixed;
+    transform: translateX(100px) translateY(160px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.template .content2 .follow a{
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 20px;
+}
+.message{
+    font-size: 60px;
+}
+
+.content2{
+    height: 250px;
+    width: 50%;
+    background: rgba(241, 241, 238);
+    
+}
+.message2{
+    padding-top: 10px;
+    text-align: center;
+
+}
+.message3{
+    font-family:'Times New Roman', Times, serif;
+    font-size: large;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.follow{
+    text-align: right;
+   
+}
+.paragraph{
+    font-family:'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+.footer{
+    transform: translateY(1100px);
+
+    width: 100%;
+    height: 200px;
+    background-color:white;
+    text-align: center;
+    padding-top: 80px;
+   
+}
+@media only screen and (max-width: 411px){
+    .nav-bar{
+        display: flex;
+        justify-content: space-between;
+        width: 411px;
+        height: 100px;
+        background:white;
+    }
+    .footer{
+        transform: translateY(1100px);
+    
+        width: 100%;
+        height: 300px;
+        background-color:black;
+    }
+    .footer h2 a{
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+}

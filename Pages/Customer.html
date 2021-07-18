@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="../css/nav.css">
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 60px;
+        text-align: center;
+        color: darkgreen;
+    }
+    .container{
+    transform: translateY(60px);
+    }
+    .sendmoney{
+        transform: translateX(500px);
+    }
+    #money{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 300px;
+        width: 500px;
+        position:absolute;
+        border: black solid 5px;
+        left: 500px;
+        top: -10px;
+        background: white;
+      
+    }
+    .container #money h1{
+        color:black;
+        position: fixed;
+        top: -1px;
+        left: 516px;
+        background: white;
+    }
+    .buttons{
+        display: flex;
+    }
+    .nav .menu ul li button{
+        background: green;
+    }
+    .container #money .buttons button{
+        background: green;
+    }
+    .container #money .buttons .btn1{
+        background: red;
+    }
+    </style>
+<body>
+    <div class="nav">
+        <div class="menu">
+            <ul>
+           <li><a href="../index.html" class="men1">Home</a></li>
+           <li><a href="./Pages/About.html" class="men1">Customer</a></li>
+           <li><a href="" class="men1">Features</a></li>
+           <li><a href="" class="men1">Contacts</a></li>
+           <li><button class=" sendmoney" onclick="show()">Send Money</button></li>
+
+           
+
+           </ul>
+        </div>
+        <div class="search-box"><input type="text"><button>search</button></div>
+    </div>
+    <div class="container">
+    <h1 class="header">Customer Details</h1>
+
+    <div id="money">
+       <h1>Send Money</h1><br>
+       <input type="text" placeholder="Sender's Mail Id" id="enterName"><br>
+       <input type="text" placeholder="Recivers Mail Id" id="enterSname"><br>
+       <input type="text" placeholder="Amount" id="enterAmount"><br>
+       <div class="buttons">
+       <button onclick="cross()" class="btn1">Close</button>
+       <button onclick="money()">Send Money</button>
+    </div>
+    
+    
+    
+    </div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Mail</th>
+            <th>Balance</th>
+        </tr>
+        <tr>
+            <td>Anand Aman</td>
+            <td id="anand">anandaman577@gmail.com</td>
+            <td id="anandBankBalance">10000</td>
+        </tr>
+        <tr>
+            <td>Amol Anshuman</td>
+            <td  id="amol">amolanshuman99@gmail.com</td>
+            <td  id="amolBankBalance">18000</td>
+        </tr>
+        <tr>
+            <td>Kumar Sam</td>
+            <td id="sam">kumarsam28@gmail.com</td>
+            <td id="samBankBalance">9000</td>
+        </tr>
+        <tr>
+            <td>Manthan Singh</td>
+            <td id="manthan">manthankumar07@gmail.com</td>
+            <td id="manthanBankBalance">20000</td>
+        </tr>
+        <tr>
+            <td>Nikhil Nischal</td>
+            <td id="nikhil">nikhilnischal99@gmail.com</td>
+            <td id="nikhilBankBalance">4500</td>
+        </tr>
+        <tr>
+            <td>Pawan Kumar Ashish</td>
+            <td id="pawan">pkr99@gmail.com</td>
+            <td id="pawanBankBalance">7800</td>
+        </tr>
+        <tr>
+            <td>Santosh Mahto</td>
+            <td id="santosh">smahto18@gmail.com</td>
+            <td id="santoshBankBalance">11000</td>
+        </tr>
+        <tr>
+            <td>Vishal Singh</td>
+            <td id="vishal"> vishalsingh13@gmail.com</td>
+            <td id="vishalBankBalance">8800</td>
+        </tr>
+        <tr>
+            <td>Vijay Kumar</td>
+            <td id="vijay">vkr15@gmail.com</td>
+            <td id="vijayBankBalance">9800</td>
+        </tr>
+        <tr>
+            <td>Upendra Prasad Mahto</td>
+            <td id="upendra">upendra.mahto4783@gmail.com</td>
+            <td id="upendraBankBalance">5500</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+<script>
+
+function cross(){
+    var close =document.getElementById('money')
+    close.style.display = "none";
+
+}
+function show(){
+    var close =document.getElementById('money')
+    close.style.display = "flex";
+    
+
+}
+
+function money() {
+var send = document.getElementById('enterName').value;
+    var receive = document.getElementById('enterSname').value;
+    var amount =parseInt( document.getElementById('enterAmount').value);
+    
+
+    var Anand =document.getElementById('anand').textContent;
+    var Amol =document.getElementById('amol').textContent;
+    var Sam =document.getElementById('sam').textContent;
+    var Manthan =document.getElementById('manthan').textContent;
+    var Nikhil =document.getElementById('nikhil').textContent;
+    var Pawan =document.getElementById('pawan').textContent;
+    var Santosh =document.getElementById('santosh').textContent;
+    var Vishal =document.getElementById('vishal').textContent;
+    var Vijay =document.getElementById('vijay').textContent;
+    var Upendra =document.getElementById('upendra').textContent;
+    // var emails = [  Anand , Amol , Sam , Manthan , Nikhil , Pawan , Santosh , Vishal , Vijay , Upendra ]
+
+    
+    
+
+    // Amounts 
+    var anandAmount =parseInt(document.getElementById('anandBankBalance').textContent);
+    var amolAmount =parseInt(document.getElementById('amolBankBalance').textContent);
+    var samAmount =parseInt(document.getElementById('samBankBalance').textContent);
+    var manthanAmount =parseInt(document.getElementById('manthanBankBalance').textContent);
+    var nikhilAmount =parseInt(document.getElementById('nikhilBankBalance').textContent);
+    var pawanmount =parseInt(document.getElementById('pawanBankBalance').textContent);
+    var santoshAmount =parseInt(document.getElementById('santoshBankBalance').textContent);
+    var vishalAmount =parseInt(document.getElementById('vishalBankBalance').textContent);
+    var vijayAmount =parseInt(document.getElementById('vijayBankBalance').textContent);
+    var upendraAmount =parseInt(document.getElementById('upendraBankBalance').textContent);
+
+    console.log(vishalAmount);   
+    
+    // calculation of anandAmount to other bank
+    var result = anandAmount - amount;
+    var resultamol = amolAmount + amount;
+    var resultsam = samAmount + amount;
+    var resultmanthan = manthanAmount +amount;
+    var resultnikhil= nikhilAmount + amount;
+    var pawanresult = pawanmount + amount;
+    var santoshresult = santoshAmount + amount;
+    var vishalresult = vishalAmount + amount;
+    var vijayresult = vijayAmount + amount;
+    var upendraresult = upendraAmount + amount;
+    var anandresult = anandAmount + amount;
+
+
+    // calculation of amolAmount to other bank
+    var result1 = amolAmount - amount;
+
+  
+    
+    
+    // anand complete
+
+if (send===Anand && receive===Amol){
+
+document.getElementById('anandBankBalance').innerHTML=parseInt(result);
+document.getElementById('amolBankBalance').innerHTML= parseInt( resultamol);
+}
+else if (send===Anand && receive===Sam){
+
+document.getElementById('anandBankBalance').innerHTML=parseInt(result);
+document.getElementById('samBankBalance').innerHTML=parseInt(resultsam);
+}
+
+else if (send===Anand && receive===Manthan){
+
+document.getElementById('anandBankBalance').innerHTML=parseInt(result);
+document.getElementById('manthanBankBalance').innerHTML=parseInt(resultmanthan);
+}
+else if (send===Anand && receive===Nikhil){
+
+document.getElementById('anandBankBalance').innerHTML=parseInt(result);
+document.getElementById('nikhilBankBalance').innerHTML=parseInt(resultnikhil);
+}
+else if (send===Anand && receive===Pawan){
+
+document.getElementById('anandBankBalance').innerHTML=parseInt(result);
+document.getElementById('pawanBankBalance').innerHTML=parseInt(pawanresult);
+}
+else if (send===Anand && receive===Santosh){
+
+document.getElementById('anandBankBalance').innerHTML=parseInt(result);
+document.getElementById('santoshBankBalance').innerHTML=parseInt(santoshresult);
+}
+else if (send===Anand && receive===Vishal){
+
+document.getElementById('anandBankBalance').innerHTML=parseInt(result);
+document.getElementById('vishalBankBalance').innerHTML=parseInt(vishalresult);
+}
+else if (send===Anand && receive===Vijay){
+
+document.getElementById('anandBankBalance').innerHTML=parseInt(result);
+document.getElementById('vijayBankBalance').innerHTML=parseInt(vijayresult);
+}
+else if (send===Anand && receive===Upendra){
+
+document.getElementById('anandBankBalance').innerHTML=parseInt(result);
+document.getElementById('upendraBankBalance').innerHTML=parseInt(upendraresult);
+}
+// amol 
+else if (send===Amol && receive===Anand){
+
+document.getElementById('amolBankBalance').innerHTML=parseInt(result1);
+document.getElementById('anandBankBalance').innerHTML=parseInt(anandresult);
+}
+
+else if (send===Amol && receive===Sam){
+
+document.getElementById('amolBankBalance').innerHTML=parseInt(result);
+document.getElementById('samBankBalance').innerHTML=parseInt(resultsam);
+}
+
+else if (send===Amol && receive===Manthan){
+
+document.getElementById('amolBankBalance').innerHTML=parseInt(result);
+document.getElementById('manthanBankBalance').innerHTML=parseInt(resultmanthan);
+}
+else if (send===Amol  && receive===Nikhil){
+
+document.getElementById('amolBankBalance').innerHTML=parseInt(result);
+document.getElementById('nikhilBankBalance').innerHTML=parseInt(resultnikhil);
+}
+else if (send===Amol  && receive===Pawan){
+
+document.getElementById('amolBankBalance').innerHTML=parseInt(result);
+document.getElementById('pawanBankBalance').innerHTML=parseInt(pawanresult);
+}
+else if (send===Amol  && receive===Santosh){
+
+document.getElementById('amolBankBalance').innerHTML=parseInt(result);
+document.getElementById('santoshBankBalance').innerHTML=parseInt(santoshresult);
+}
+else if (send===Amol  && receive===Vishal){
+
+document.getElementById('amolBankBalance').innerHTML=parseInt(result);
+document.getElementById('vishalBankBalance').innerHTML=parseInt(vishalresult);
+}
+else if (send===Amol  && receive===Vijay){
+
+document.getElementById('amolBankBalance').innerHTML=parseInt(result);
+document.getElementById('vijayBankBalance').innerHTML=parseInt(vijayresult);
+}
+else if (send===Amol  && receive===Upendra){
+
+document.getElementById('amolBankBalance').innerHTML=parseInt(result);
+document.getElementById('upendraBankBalance').innerHTML=parseInt(upendraresult);
+}
+
+
+}
+</script>
+</html>
